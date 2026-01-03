@@ -1,0 +1,23 @@
+body {
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #e5e8e8;
+    color: black;
+    font-weight: bold;
+}
+
+.card-title {
+    color: #2e86c1;
+}
+
+.Main_title {
+background-image: url(../image/Background/Backgroindnews.jpg);
+height: 250px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-position: 50% 0%;
+}
+

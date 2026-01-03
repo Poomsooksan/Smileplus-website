@@ -1,0 +1,20 @@
+.footer-custom {
+    background-color: #5a5959;
+}
+
+@media (max-width:767px) {
+    .footer_link {
+        display: none;
+    }
+}
+
+.footer_link {
+    text-align: center;
+}
+
+@media(max-width:990px) {
+    .footer-custom {
+        text-align: center;
+    }
+}
+

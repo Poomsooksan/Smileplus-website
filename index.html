@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile plus rental co.ltd</title>
+    <!-- fontstyle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700;900&family=DM+Serif+Text:ital@0;1&family=PT+Serif+Caption:ital@0;1&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Antique&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="CSS/heading.css" rel="stylesheet">
+    <link href="CSS/footer.css" rel="stylesheet">
+    <link href="CSS/index.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ********************************headding******************************** -->
+    <div class="top_bar d-flex align-items-center"
+        style="background-color: #ffffff; height: 40px; padding: 0 20px; width: 100%; justify-content: space-between;">
+        <div class="d-flex align-items-center">
+            <div class="dropdown me-3">
+                <button class="btn btn-light dropdown-toggle p-1" type="button" id="languageDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="current-flag">🇹🇭</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('th')">
+                            <span class="me-2">TH</span> ภาษาไทย
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                            <span class="me-2">US</span> English
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="top_bar-item ms-md-3">
+                <a class="topbar_text d-flex align-items-center" href="tel:+6692-924-6812" target="_blank">
+                    <i class="bi bi-telephone-fill text_icon" style="color: #000000; font-size: 18px;">
+                    </i>
+                    <span class="contact_text" style="font-size: 10px; font-weight: bold;">
+                        +6692-924-6812
+                    </span>
+                </a>
+                <a class="topbar_text ms-3 d-flex align-items-center" href="mailto:Smileplus@gmail.com" target="_blank">
+                    <i class="bi bi-envelope-fill text_icon" style="color: #000000; font-size: 18px;">
+                    </i>
+                    <span class="contact_text" style="font-size: 10px; margin-left: 3px; font-weight: bold;">
+                        Email: Smileplus@gmail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="d-flex me-4" style="margin-left: auto;">
+            <div class="top_bar-item top_bar-social">
+                <a class="top_bar-item top_bar-social-icon"
+                    href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a class="top_bar-item top_bar-social-icon" href="https://line.me/ti/p/yourLineID" target="_blank">
+                    <i class="bi bi-line"></i>
+                </a>
+                <a class="top_bar-item top_bar-social-icon" href="https://www.youtube.com/channel/your_channel_id"
+                    target="_blank">
+                    <i class="bi bi-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-logo ms-2" href="./index.html">
+                <img src="./image/logo3.jpg" alt="logo" class="Logo_img">
+            </a>
+            <button class="navbar-toggler ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item about">
+                        <a id="nav_about" class="nav-link inactive" href="./page/Aboutus.html">เกี่ยวกับเรา</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="nav_machine" class="nav-link inactive dropdown-toggle" href="#" aria-expanded="false"
+                            id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true">เครื่องจักร</a>
+                        <div class="dropdown-menu animated-dropdown" aria-labelledby="dropdown01">
+                            <a id="nav_boom" class="dropdown-item" href="./page/Machine_Boomlift.html">รถกระเช้า Boom Lift</a>
+                            <a id="nav_x" class="dropdown-item" href="./page/Machine_X-lift.html">ลิฟท์ขากรรไกร X-Lift</a>
+                            <a id="nav_All" class="dropdown-item" href="./page/Machine.html">ทั้งหมด</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav_news" class="nav-link inactive" href="./page/news.html">ข่าวสาร เเละประชาสัมพันธ์</a>
+                    </li>
+                </ul>
+                <form class="order-3 ms-auto search-form-Labtop" role="search">
+                    <input class="form-control me-2" type="search" placeholder="" aria-label="search">
+                    <button id="nav_seach" class="btn btn-outline-success" type="submit"
+                        style="background-color:#d5d5d5; color: rgb(0, 0, 0); font-weight: 600;"> ค้นหา</button>
+                </form>
+            </div>
+        </div>
+        <div class="search-container">
+            <!-- ปุ่มไอคอนค้นหา -->
+            <button class="search-icon search-form-mobile" onclick="toggleSearchForm()">
+                <i class="bi bi-search"></i>
+            </button>
+
+            <!-- แบบฟอร์มค้นหา -->
+            <form class="search-form" id="searchForm">
+                <input type="text" placeholder="พิมพ์เพื่อค้นหา...">
+                <button type="submit">ค้นหา</button>
+            </form>
+        </div>
+
+        <div class="logo">
+            <a href="#">
+                <img src="./image/logo3.jpg" alt="logo" class="Logo_md">
+            </a>
+        </div>
+    </nav>
+
+    <!-- ************************************************************************************************ -->
+    <div class="container-fluid body1" style="height: auto;">
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner mb-1">
+                <div class="carousel-item active">
+                    <img src="./image/3.png" class="d-block w-100"
+                        style="height: 80vh;object-fit: cover;object-position: 5% 12%;filter: brightness(75%);transform: scaleX(-1);"
+                        alt="Image 1">
+
+                    <div class="carousel-split-container">
+                        <div class="carousel-left-section">
+                            <div class="carousel-caption caption1">
+                                <div class="caption1_overay">
+                                    <div class="caption1_textbox">
+                                        <div class="caption1_header">
+                                            <h3 class="carousel_highlight"> Smile Plus </h3>
+                                            <div class="sticker_wrapper">
+                                                <img src="./image/smile_sticker.png" alt="Image"
+                                                    class="carousel_image_overlay1">
+                                            </div>
+                                        </div>
+                                        <div class="carousel_detail">
+                                            <h2>บริการจัดหารถกระเช้า <br class="carousel_detail_br_for_md">
+                                                เเละรถลิฟท์ขากรรไกร<br>สำหรับงานก่อสร้าง เเละงานอุสาหกรรม
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-caption caption2">
+                                <div class="caption2_overay">
+                                    <h2>จัดส่งรวดเร็ว ส่งซ่อมทันใจ</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-right-section">
+                            <img src="./image/smile-logo-circle.jpg" alt="Image" class="carousel_image_overlay2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./image/4.png" class="d-block w-100"
+                        style="height: 80vh; object-fit: cover; object-position: 100% 45%; filter: brightness(55%);"
+                        alt="Image 2">
+
+                    <!-- flex container -->
+                    <div class="carousel-content">
+                        <div class="caption3">
+                            <h2>
+                                <span class="caption3-span1">บริการด้วยใจ</span>
+                                <span class="caption3-span2">พร้อมทีมงานมากประสบการณ์</span>
+                            </h2>
+                        </div>
+
+                        <div class="caption4">
+                            <h2>
+                                บริษัท สมายพลัส
+                                <span class="caption_callnumber">
+                                    092-924-6812
+                                    <a href="tel:0929246812" class="caption_callnumber_emoji">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40"
+                                            height="40" fill="white">
+                                            <path
+                                                d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011-.24 11.36 11.36 0 003.55.57 1 1 0 011 1v3.61a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.61a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.24 1z" />
+                                        </svg>
+                                    </a>
+                                </span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls (อยู่นอก carousel-inner) -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="container-fluid body2 mb-2 ">
+            <div class="row body2_background g-0 ">
+                <div class="col-6 body2-box">
+                    <h2>เกี่ยวกับเรา</h2>
+                    <h3>บริษัท สมาย พลัส จำกัด</h3>
+                    <p>ก่อตั้งในปี 2020 สำนักงานอยู่ที่ อำเภอ บางบ่อ จังหวัด สมุทรปราการ
+                        เป็นผู้ให้บริการจัดหาเครื่องจักร สำหรับทำงานในพื้นที่สูง ไม่ว่จะเป็นรถกระเช้า(Boomlift)
+                        หรือรถลิฟย์ขากรรไกร(X-Lift) พร้อมด้วยคำเเนะนำ เเละการอบรมการใช้งานจากทีมงานที่เชี่ยวชาญ
+                        เพื่อสร้างความสะดวก
+                        เเละความปลอดภัยในการทำงานของลูกค้า ไม่ว่าจะเป็นงานก่อสร้าง งานอุตสาหกกรม หรืองานในคลังสินค้า</p>
+
+                    <ul>
+                        <li>เครื่องจักรสภาพดี</li>
+                        <li>ราคาไม่เเพง</li>
+                        <li>ทีมงานมากประสบการณ์</li>
+                        <li>บริการรวดเร็ว</li>
+                    </ul>
+                    <a href="./page/Aboutus.html" class="body2-box_button btn btn-light text-dark border-dark mt-2 mb-3">ดูเพิ่มเติม</a>
+                </div>
+
+
+                <div class="col-6 body2-box2">
+                    <div class="image-container-fluid ">
+                        <img src="./image/Office2.jpg" alt="Image">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-1 mb-2">
+            <div class="safty">
+                <div class="row mt-2">
+                    <div class="col-12 col-md-6" style="padding-right: 0;">
+                        <div class="image-container_safety">
+                            <img src="./image/safety.png" alt="รูปภาพตัวอย่าง">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6" style="padding-left: 0;">
+                        <div class="description-text">
+                            <h3>เพิ่มประสิทธิภาพงาน ยกระดับความปลอดภัยด้วย Boom Lift และ Scissor Lift</h3>
+                            <p>
+                                ไม่ว่าจะเป็นงานก่อสร้าง งานซ่อมบำรุง หรือแม้แต่งานติดตั้งในคลังสินค้าและโรงงาน
+                                เพื่อให้การทำงานบนที่สูงเป็นไปอย่างราบรื่น และได้ผลลัพธ์สูงสุด Boom Lift และ Scissor
+                                Lift
+                                สองเครื่องจักรคู่ใจที่จะเข้ามาพลิกโฉมวิธีการทำงานของคุณ  
+                            </p>
+                              <a href="./page/news.html" class="description_btn btn-link">
+                                ดูเพิ่มเติม &raquo;
+                              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid body4">
+            <div class="container-fluid d-flex mt-4 ms-2" style="justify-content: start;">
+                <h2 class="Service"> บริการของเรา</h2>
+            </div>
+
+
+            <div class="row d-flex mt-1" style="justify-content: center;margin-left: 10%;margin-right: 10%;">
+                <div class="col-12 col-md-6 mb-4 d-flex" style="justify-content: center;">
+                    <div class="custom-card">
+                        <div class="bg-top"></div>
+                        <div class="bg-bottom"></div>
+                        <img src="./image/boomlift.jfif" alt="Sample Image" style="height: 330px; margin-top: 40px;">
+                        <div class="description">
+                            <h5>Boom Lift</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 mb-4 d-flex" style="justify-content: center;">
+                    <div class="custom-card">
+                        <div class="bg-top"></div>
+                        <div class="bg-bottom"></div>
+                        <img src="./image/xlift.png" alt="Sample Image">
+                        <div class="description">
+                            <h5>scrisser lift (X-Lift)</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- footer -->
+        <footer class="footer-custom text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Company Information -->
+                    <div class="col-md-4 mb-3">
+                        <h5>เกี่ยวกับเรา</h5>
+                        <p>Smile Plus Rental Co., Ltd.<br>
+                            ให้บริการเช่าเครื่องจักรสำหรับงานก่อสร้างและอุตสาหกรรม</p>
+                        <p><i class="bi bi-geo-alt"></i> ที่อยู่: 123/45 ถนนสายหลัก เขตบางกอก กรุงเทพฯ</p>
+                    </div>
+                    <!-- Quick Links -->
+                    <div class="col-md-4 mb-3 footer_link">
+                        <h5>ลิงก์ที่เป็นประโยชน์</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white text-decoration-none">หน้าหลัก</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">เกี่ยวกับเรา</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">เครื่องจักร</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">ติดต่อเรา</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Information -->
+                    <div class="col-md-4 mb-3 footer_contact">
+                        <h5>ติดต่อเรา</h5>
+                        <p><i class="bi bi-telephone"></i> โทร: 0xx-xxx-xxxx</p>
+                        <p><i class="bi bi-envelope"></i> อีเมล: contact@smileplus.co.th</p>
+                        <div>
+                            <a href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank"
+                                class="text-white me-2" rel="noopener noreferrer">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://line.me/ti/p/yourLineID" target="_blank" class="text-white me-2">
+                                <i class="bi bi-line"></i>
+                            </a>
+                            <a href="tel:0xx-xxx-xxxx" class="text-white">
+                                <i class="bi bi-telephone"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="bg-white">
+                <div class="text-center footer_copy">
+                    <p class="mb-0">&copy; 2025 Smile Plus Rental Co., Ltd. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+        </script>
+        <script src="jss/script.js"></script>
+        <script src="jss/index.js"></script>
+
+        <script>
+            function toggleSearchForm() {
+                const form = document.getElementById('searchForm');
+                form.style.display = (form.style.display === 'block') ? 'none' : 'block';
+            }
+
+            // ปิดฟอร์มเมื่อคลิกนอกพื้นที่
+            document.addEventListener('click', function (event) {
+                const container = document.querySelector('.search-container');
+                if (!container.contains(event.target)) {
+                    document.getElementById('searchForm').style.display = 'none';
+                }
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+:root {
+    color-scheme: light only;
+
+    /* font-family styles */
+    --font-primary: "Noto Sans Thai Looped", sans-serif;
+    --font-secondary: "Kanit", sans-serif;
+    --font-accent: "Zen Antique", serif;
+    --font-decorative: "Volkhov", serif;
+
+    /* font size */
+    --size-heading: 4.7rem;
+    --size-subheading: 2.2rem;
+    --size-title: 2rem;
+    --size-body: 1.2rem;
+
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    background-image: url(../image/about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+}
+
+.hero_caption {
+    color: #e0dddd;
+    font-family: var(--font-decorative);
+    font-weight: 600;
+}
+
+.Main {
+    font-size: var(--size-heading);
+    font-weight: 800;
+}
+
+.Subheadings {
+    font-size: var(--size-subheading);
+}
+
+.Aboutus_IMG_1 {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+    object-position: 0% 60%;
+}
+
+
+.Aboutus_IMG_2 {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+    object-position: 0% 70%;
+}
+
+.row1_text,
+.row2_text {
+    font-family: var(--font-secondary)
+}
+
+.card-title {
+    font-size: 5px !important
+}
+
+.card-body h5 {
+    font-size: var(--size-title) !important
+}
+
+.card-body P {
+    font-size: var(--size-body);
+}
+
+
+/* Responsive */
+
+@media (max-width:1160px) {
+    :root {
+        --size-body: 1rem;
+        --size-title: 1.5rem;
+        --size-heading: 3.5rem;
+        --size-subheading: 2rem;
+    }
+
+    .hero {
+        height: 300px;
+    }
+}
+
+@media (max-width:1000px) {
+    :root {
+        --size-body: 0.8rem;
+        --size-title: 1.2rem;
+        --size-heading: 3rem;
+        --size-subheading: 1.8rem;
+    }
+
+    .hero {
+        height: 280px;
+    }
+}
+
+@media (max-width:870px) {
+    :root {
+        --size-body: 0.6rem;
+        --size-title: 1rem;
+        --size-heading: 2.5rem;
+        --size-subheading: 1.5rem;
+    }
+
+    .hero {
+        height: 200px;
+    }
+}
+
+@media (max-width:767px) {
+    :root {
+        --size-body: 1rem;
+        --size-title: 1.5rem
+    }
+
+    .Aboutus_IMG_1 {
+        max-height: 320px;
+    }
+
+    .Aboutus_IMG_2 {
+        max-height: 380px;
+    }
+}
+
+@media (max-width:600px) {
+    :root {
+        --size-body: 0.8rem;
+        --size-title: 1.2rem
+    }
+
+    .Aboutus_IMG_1 {
+        max-height: 250px;
+    }
+
+    .Aboutus_IMG_2 {
+        max-height: 310px;
+    }
+}
+
+@media (max-width:440px) {
+    :root {
+        --size-body: 0.6rem;
+        --size-title: 1rem
+    }
+
+    .Aboutus_IMG_1 {
+        max-height: 190px;
+    }
+
+    .Aboutus_IMG_2 {
+        max-height: 220px;
+    }
+}

@@ -1,0 +1,154 @@
+:root {
+    color-scheme: light only;
+
+    /* font-family styles */
+    --font-primary: "Noto Sans Thai Looped", sans-serif;
+    --font-secondary: "Kanit", sans-serif;
+    --font-accent: "Zen Antique", serif;
+    --font-decorative: "Volkhov", serif;
+    /* font size */
+    --size-heading: 4.7rem;
+    --size-subheading: 2.2rem;
+    --size-title: 2rem;
+    --size-body: 1.2rem;
+
+}
+
+.product-card {
+    margin-top: 120px;
+}
+
+.border_pic {
+    justify-self: center;
+    align-items: center;
+    border-radius: 3px;
+    padding: 4px;
+
+}
+
+.product-image {
+    padding-inline: 1rem;
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    object-position: 50% 20%;
+}
+
+.product-title {
+    font-family: var(--font-secondary);
+}
+
+.Product-title-mobile {
+    display: none;
+    font-family: var(--font-secondary);
+}
+
+.alert-success {
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.product-card .col-md-6.d-flex.align-items-center {
+    justify-content: center;
+    padding-right: 5rem;
+}
+
+.table {
+    margin-bottom: 3rem;
+}
+
+
+/* Responsive */
+
+@media (max-width:1198px) {
+    .product-image{
+        height: 280px;
+    }
+}
+
+@media (max-width:1160px) {
+    :root {
+        --size-body: 1rem;
+        --size-title: 1.5rem;
+        --size-heading: 3.5rem;
+        --size-subheading: 2rem;
+    }
+}
+
+@media (max-width:1000px) {
+    :root {
+        --size-body: 0.8rem;
+        --size-title: 1.2rem;
+        --size-heading: 3rem;
+        --size-subheading: 1.8rem;
+    }
+}
+
+@media (max-width:991px) {
+    .product-image{
+        height: 260px;
+    }
+}
+
+@media (max-width:870px) {
+    :root {
+        --size-body: 0.6rem;
+        --size-title: 1rem;
+        --size-heading: 2.5rem;
+        --size-subheading: 1.5rem;
+    }
+}
+
+@media (max-width:767px) {
+    :root {
+        --size-body: 1rem;
+        --size-title: 1.5rem
+    }
+
+    .product-card {
+        margin-top: 0;
+    }
+
+    .Product-title-mobile {
+        display: flex;
+        margin-top: 120px;
+    }
+
+    .product-title {
+        display: none;
+    }
+
+    .product-image {
+        height: 210px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .spec-detail {
+        display: table-caption;
+    }
+
+    .contact-bibi {
+        justify-content: center;
+        margin-block: 1rem;
+    }
+
+    .product-card .col-md-6.d-flex.align-items-center {
+        padding-right: 0;
+    }
+}
+
+@media (max-width:600px) {
+    :root {
+        --size-body: 0.8rem;
+        --size-title: 1.2rem
+    }
+}
+
+@media (max-width:440px) {
+    :root {
+        --size-body: 0.6rem;
+        --size-title: 1rem
+    }
+}
+

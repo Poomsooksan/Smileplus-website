@@ -1,0 +1,248 @@
+:root {
+    color-scheme: light only;
+
+    /* font-family styles */
+    --font-primary: "Noto Sans Thai Looped", sans-serif;
+    --font-secondary: "Kanit", sans-serif;
+    --font-accent: "Zen Antique", serif;
+    --font-decorative: "Volkhov", serif;
+
+    /* font size */
+    --size-heading: 4.7rem;
+    --size-subheading: 2.2rem;
+    --size-title: 2rem;
+    --size-body: 1.2rem;
+
+}
+
+/* Responsive */
+
+@media (max-width:1160px) {
+    :root {
+        --size-body: 1rem;
+        --size-title: 1.5rem;
+        --size-heading: 3.5rem;
+        --size-subheading: 2rem;
+    }
+}
+
+@media (max-width:1000px) {
+    :root {
+        --size-body: 0.8rem;
+        --size-title: 1.2rem;
+        --size-heading: 3rem;
+        --size-subheading: 1.8rem;
+    }
+}
+
+@media (max-width:870px) {
+    :root {
+        --size-body: 0.6rem;
+        --size-title: 1rem;
+        --size-heading: 2.5rem;
+        --size-subheading: 1.5rem;
+    }
+}
+
+@media (max-width:767px) {
+    :root {
+        --size-body: 1rem;
+        --size-title: 1.5rem
+    }
+}
+
+@media (max-width:600px) {
+    :root {
+        --size-body: 0.8rem;
+        --size-title: 1.2rem
+    }
+}
+
+@media (max-width:440px) {
+    :root {
+        --size-body: 0.6rem;
+        --size-title: 1rem
+    }
+}
+
+/* Hero Section Styling */
+
+/* Filter Machine Container */
+.Filter_mach {
+    padding: 2rem 0;
+}
+
+.Filter_mach h3 {
+    color: rgb(37, 40, 42);
+    font-size: var(--size-title);
+    font-family: var(--font-decorative);
+    font-weight: 600;
+    margin-bottom: 1.75rem;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.Filter_mach h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 3px;
+    background: linear-gradient(90deg, #424242 0%, #616161 100%);
+    border-radius: 2px;
+}
+
+/* Button Container */
+.machtype {
+    flex-wrap: wrap;
+}
+
+/* Filter Buttons */
+
+.filter-btn {
+    background: #f8f8f8;
+    color: #333;
+    border: 1.5px solid #888888;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    letter-spacing: 0.3px;
+}
+
+.filter-btn-Active {
+    background: linear-gradient(20deg, rgba(48, 84, 32, 0.98), rgba(27, 65, 32, 0.81));
+    color: #ffffff;
+    border: #1e531a;
+    border-color: #1e531a;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.3px;
+}
+
+.filter-btn:hover {
+    background: #7a7a7a;
+    color: #f8f8f8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #424242 0%, #212121 100%);
+    color: #ffffff;
+    border-color: #212121;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.subdetail {
+    margin-bottom: 0.5rem;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding-top: 0.5rem;
+}
+
+.card-body h5 {
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.card-body p {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+}
+
+.btn-detail {
+    background-color: #e5e5e5;
+    border-color: #959595;
+}
+
+.btn-detail:hover {
+    background-color: #626262;
+    color: white;
+    border-color: #7d7d7d;
+}
+
+.machine-card img {
+    border-bottom: 1px solid #c7c7c7;
+    object-fit: contain;
+    padding-bottom: 5px;
+}
+
+.machine_type {
+    font-family: var(--font-decorative);
+    font-size: var(--size-body);
+    font-weight: 600;
+}
+
+.machine-card img {
+     transition: transform 0.3s ease;
+}
+
+.machine-card:hover img {
+    transform: scale(1.05); 
+    z-index: 10; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Filter_mach h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.625rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+
+    .machtype {
+        gap: 0.5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .Filter_mach h3 {
+        font-size: 1.25rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Catalog CSS  */
+.product-card {
+    margin-top: 120px;
+}
+
+.machtype a {
+    text-decoration: none;
+}

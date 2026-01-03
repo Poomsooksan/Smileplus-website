@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Plus Rental Co., Ltd</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../CSS/heading.css" rel="stylesheet">
+    <link href="../CSS/footer.css" rel="stylesheet">
+    <link href="../CSS/news.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top_bar d-flex align-items-center"
+        style="background-color: #ffffff; height: 40px; padding: 0 20px; width: 100%; justify-content: space-between;">
+        <div class="d-flex align-items-center">
+            <div class="dropdown me-3">
+                <button class="btn btn-light dropdown-toggle p-1" type="button" id="languageDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="current-flag">🇹🇭</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('th')">
+                            <span class="me-2">TH</span> ภาษาไทย
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                            <span class="me-2">US</span> English
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="top_bar-item ms-md-3">
+                <a class="topbar_text d-flex align-items-center" href="tel:+6692-924-6812" target="_blank">
+                    <i class="bi bi-telephone-fill text_icon" style="color: #000000; font-size: 18px;">
+                    </i>
+                    <span class="contact_text" style="font-size: 10px; font-weight: bold;">
+                        +6692-924-6812
+                    </span>
+                </a>
+                <a class="topbar_text ms-3 d-flex align-items-center" href="mailto:Smileplus@gmail.com" target="_blank">
+                    <i class="bi bi-envelope-fill text_icon" style="color: #000000; font-size: 18px;">
+                    </i>
+                    <span class="contact_text" style="font-size: 10px; margin-left: 3px; font-weight: bold;">
+                        Email: Smileplus@gmail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="d-flex me-4" style="margin-left: auto;">
+            <div class="top_bar-item top_bar-social">
+                <a class="top_bar-item top_bar-social-icon"
+                    href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a class="top_bar-item top_bar-social-icon" href="https://line.me/ti/p/yourLineID" target="_blank">
+                    <i class="bi bi-line"></i>
+                </a>
+                <a class="top_bar-item top_bar-social-icon" href="https://www.youtube.com/channel/your_channel_id"
+                    target="_blank">
+                    <i class="bi bi-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-logo ms-2" href="../index.html">
+                <img src="../image/logo3.jpg" alt="logo" class="Logo_img">
+            </a>
+            <button class="navbar-toggler ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item about">
+                        <a id="nav_about" class="nav-link inactive" href="./Aboutus.html">เกี่ยวกับเรา</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="nav_machine" class="nav-link inactive     dropdown-toggle" href="#" aria-expanded="false"
+                            id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true">เครื่องจักร</a>
+                       <div class="dropdown-menu animated-dropdown" aria-labelledby="dropdown01">
+                            <a id="nav_boom" class="dropdown-item" href="Machine_Boomlift.html">รถกระเช้า Boom Lift</a>
+                            <a id="nav_x" class="dropdown-item" href="Machine_X-lift.html">ลิฟท์ขากรรไกร X-Lift</a>
+                            <a id="nav_All" class="dropdown-item" href="Machine.html">ทั้งหมด</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav_news" class="nav-link active" href="#">ข่าวสาร เเละประชาสัมพันธ์</a>
+                    </li>
+                </ul>
+                <form class="order-3 ms-auto search-form-Labtop" role="search">
+                    <input class="form-control me-2" type="search" placeholder="" aria-label="search">
+                    <button id="nav_seach" class="btn btn-outline-success" type="submit"
+                        style="background-color:#d5d5d5; color: rgb(0, 0, 0); font-weight: 600;"> ค้นหา</button>
+                </form>
+            </div>
+        </div>
+        <div class="search-container">
+            <!-- ปุ่มไอคอนค้นหา -->
+            <button class="search-icon search-form-mobile" onclick="toggleSearchForm()">
+                <i class="bi bi-search"></i>
+            </button>
+
+            <!-- แบบฟอร์มค้นหา -->
+            <form class="search-form" id="searchForm">
+                <input type="text" placeholder="พิมพ์เพื่อค้นหา...">
+                <button type="submit">ค้นหา</button>
+            </form>
+        </div>
+
+        <div class="logo">
+            <a href="#">
+                <img src="../image/logo3.jpg" alt="logo" class="Logo_md">
+            </a>
+        </div>
+    </nav>
+
+    <header class="Main_title py-5" style="margin-top: 110px;">
+        <div class="container text-center">
+            <h1>ข่าวสาร เเละประชาสัมพันธ์</h1>
+            <p>พื้นที่สำหรับติดตามกิจกรรม เเละการทำงานของเรา</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>กิจกรรมล่าสุด</h2>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">News Title 1</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus
+                            urna sed urna ultricies ac tempor dui sagittis.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">News Title 2</h5>
+                        <p class="card-text">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam
+                            volutpat aliquam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h2>ประกาศ</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Announcement 1: Lorem ipsum dolor sit amet.</li>
+                    <li class="list-group-item">Announcement 2: Vivamus luctus urna sed urna ultricies.</li>
+                    <li class="list-group-item">Announcement 3: In hac habitasse platea dictumst.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="footer-custom text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Company Information -->
+                <div class="col-md-4 mb-3">
+                    <h5>เกี่ยวกับเรา</h5>
+                    <p>Smile Plus Rental Co., Ltd.<br>
+                        ให้บริการเช่าเครื่องจักรสำหรับงานก่อสร้างและอุตสาหกรรม</p>
+                    <p><i class="bi bi-geo-alt"></i> ที่อยู่: 123/45 ถนนสายหลัก เขตบางกอก กรุงเทพฯ</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-3 footer_link">
+                    <h5>ลิงก์ที่เป็นประโยชน์</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">หน้าหลัก</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">เกี่ยวกับเรา</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">เครื่องจักร</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-md-4 mb-3 footer_contact">
+                    <h5>ติดต่อเรา</h5>
+                    <p><i class="bi bi-telephone"></i> โทร: 0xx-xxx-xxxx</p>
+                    <p><i class="bi bi-envelope"></i> อีเมล: contact@smileplus.co.th</p>
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank" class="text-white me-2">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://line.me/ti/p/yourLineID" target="_blank" class="text-white me-2">
+                            <i class="bi bi-line"></i>
+                        </a>
+                        <a href="tel:0xx-xxx-xxxx" class="text-white">
+                            <i class="bi bi-telephone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center footer_copy">
+                <p class="mb-0">&copy; 2025 Smile Plus Rental Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../jss/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile plus rental co.ltd</title>
+    <!-- fontstyle -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../CSS/heading.css" rel="stylesheet">
+    <link href="../CSS/footer.css" rel="stylesheet">
+    <link href="../CSS/Machine.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top_bar d-flex align-items-center"
+        style="background-color: #ffffff; height: 40px; padding: 0 20px; width: 100%; justify-content: space-between;">
+        <div class="d-flex align-items-center">
+            <div class="dropdown me-3">
+                <button class="btn btn-light dropdown-toggle p-1" type="button" id="languageDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <span id="current-flag">🇹🇭</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('th')">
+                            <span class="me-2">TH</span> ภาษาไทย
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" onclick="changeLanguage('en')">
+                            <span class="me-2">US</span> English
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="top_bar-item ms-md-3">
+                <a class="topbar_text d-flex align-items-center" href="tel:+6692-924-6812" target="_blank">
+                    <i class="bi bi-telephone-fill text_icon" style="color: #000000; font-size: 18px;">
+                    </i>
+                    <span class="contact_text" style="font-size: 10px; font-weight: bold;">
+                        +6692-924-6812
+                    </span>
+                </a>
+                <a class="topbar_text ms-3 d-flex align-items-center" href="mailto:Smileplus@gmail.com" target="_blank">
+                    <i class="bi bi-envelope-fill text_icon" style="color: #000000; font-size: 18px;">
+                    </i>
+                    <span class="contact_text" style="font-size: 10px; margin-left: 3px; font-weight: bold;">
+                        Email: Smileplus@gmail.com
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="d-flex me-4" style="margin-left: auto;">
+            <div class="top_bar-item top_bar-social">
+                <a class="top_bar-item top_bar-social-icon"
+                    href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a class="top_bar-item top_bar-social-icon" href="https://line.me/ti/p/yourLineID" target="_blank">
+                    <i class="bi bi-line"></i>
+                </a>
+                <a class="top_bar-item top_bar-social-icon" href="https://www.youtube.com/channel/your_channel_id"
+                    target="_blank">
+                    <i class="bi bi-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-logo ms-2" href="../index.html">
+                <img src="../image/logo3.jpg" alt="logo" class="Logo_img">
+            </a>
+            <button class="navbar-toggler ms-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item about">
+                        <a id="nav_about" class="nav-link inactive" href="./Aboutus.html">เกี่ยวกับเรา</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="nav_machine" class="nav-link active dropdown-toggle" href="#" aria-expanded="false"
+                            id="dropdown01" data-bs-toggle="dropdown" aria-haspopup="true">เครื่องจักร</a>
+                       <div class="dropdown-menu animated-dropdown" aria-labelledby="dropdown01">
+                            <a id="nav_boom" class="dropdown-item" href="Machine_Boomlift.html">รถกระเช้า Boom Lift</a>
+                            <a id="nav_x" class="dropdown-item" href="Machine_X-lift.html">ลิฟท์ขากรรไกร X-Lift</a>
+                            <a id="nav_All" class="dropdown-item" href="Machine.html">ทั้งหมด</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav_news" class="nav-link inactive" href="./news.html">ข่าวสาร เเละประชาสัมพันธ์</a>
+                    </li>
+                </ul>
+                <form class="order-3 ms-auto search-form-Labtop" role="search">
+                    <input class="form-control me-2" type="search" placeholder="" aria-label="search">
+                    <button id="nav_seach" class="btn btn-outline-success" type="submit"
+                        style="background-color:#d5d5d5; color: rgb(0, 0, 0); font-weight: 600;"> ค้นหา</button>
+                </form>
+            </div>
+        </div>
+        <div class="search-container">
+            <!-- ปุ่มไอคอนค้นหา -->
+            <button class="search-icon search-form-mobile" onclick="toggleSearchForm()">
+                <i class="bi bi-search"></i>
+            </button>
+
+            <!-- แบบฟอร์มค้นหา -->
+            <form class="search-form" id="searchForm">
+                <input type="text" placeholder="พิมพ์เพื่อค้นหา...">
+                <button type="submit">ค้นหา</button>
+            </form>
+        </div>
+
+        <div class="logo">
+            <a href="#">
+                <img src="../image/logo3.jpg" alt="logo" class="Logo_md">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+
+    <section class="hero bg-light py-3" style="margin-top: 105px;">
+        <div class="container">
+            <div class="Filter_mach text-center">
+                <h3>ประเภทเครื่องจักร</h3>
+                <div class="machtype d-flex align-items-center justify-content-center gap-2">
+                    <a class="filter-btn-Active" href="./Machine_All.html">ทั้งหมด</a>
+                    <a class="filter-btn" href="./Machine_Boomlift.html">Boomlift</a>
+                    <a class="filter-btn" href="./Machine_X-lift.html">X-lift</a>
+                </div>
+            </div>
+            <h2 class=" machine_type text-center d-flex mb-3">
+                Boomlift (36)
+            </h2>
+            <div class="catalog">
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZT42J-V">
+                            <img src="../image/Catalog/Zoomlion_ZT42J-V.jpg" class="card-img-top" alt="Boom Lift 40ft"
+                                style="object-fit: contain;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZT42J-V</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 44m</p>
+                                    <p class="card-text text-muted">Platform high 42m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZT42J-V.html"
+                                    class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_SX-135XC">
+                            <img src="../image/Catalog/Genie_SX-135XC.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie SX-135XC</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 43.15m</p>
+                                    <p class="card-text text-muted">Platform high 41.15m</p>
+                                </div>
+                                <a href="./catalog/Genie_SX-135XC.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZT42J-V">
+                            <img src="../image/Catalog/Genie_SX-125XC.jpg" class="card-img-top" alt="Boom Lift 40ft"
+                                style="object-fit: contain;object-position: 50% 55%;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie SX-125-XC</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 40.1m</p>
+                                    <p class="card-text text-muted">Platform high 38.1m</p>
+                                </div>
+                                <a href="./catalog/Genie_SX-125XC.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZT38J-V">
+                            <img src="../image/Catalog/Zoomlion_ZT38J-V .jpg" class="card-img-top" alt="Boom Lift 40ft"
+                                style="object-fit: contain; object-position: 50% 60%;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZT38J-V</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 38.1m</p>
+                                    <p class="card-text text-muted">Platform high 40.1m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZT38J-V.html"
+                                    class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_SX-105XC">
+                            <img src="../image/Catalog/Genie_SX-105XC.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie SX-105XC</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 34m</p>
+                                    <p class="card-text text-muted">Platform high 32m</p>
+                                </div>
+                                <a href="./catalog/Genie_SX-105XC.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZT32JE">
+                            <img src="../image/Catalog/Zoomlion ZT32JE.png" class="card-img-top" alt="Boom Lift 40ft"
+                                style="object-fit: contain;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZT32JE</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 32m</p>
+                                    <p class="card-text text-muted">Platform high 30m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZT32JE.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZT32J">
+                            <img src="../image/Catalog/Zoomlion ZT32J.jpg" class="card-img-top" alt="Boom Lift 40ft"
+                                style="object-fit: contain">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZT32J</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 32m</p>
+                                    <p class="card-text text-muted">Platform high 30m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZT32J.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_BA28ERT">
+                            <img src="../image/Catalog/Dingli_BA28ERT.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli BA28ERT</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 28.7m</p>
+                                    <p class="card-text text-muted">Platform high 26.7m</p>
+                                </div>
+                                <a href="./catalog/Dingli_BA28ERT.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_BA28RT">
+                            <img src="../image/Catalog/Dingli_BA28RT.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli BA28RT</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 28.7m</p>
+                                    <p class="card-text text-muted">Platform high 26.7m</p>
+                                </div>
+                                <a href="./catalog/Dingli_BA28RT.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZT26J-V">
+                            <img src="../image/Catalog/Zoomlion_ZT26J-V.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZT26J-V</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 28.7m</p>
+                                    <p class="card-text text-muted">Platform high 19.3m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZT26J-V.html"
+                                    class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 11 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_S-85XC">
+                            <img src="../image/Catalog/Genie_S-85XC.jpg.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie S-85XC</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 27.9m</p>
+                                    <p class="card-text text-muted">Platform high 25.9m</p>
+                                </div>
+                                <a href="./catalog/Genie_S-85XC.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_Z-80/60">
+                            <img src="../image/Catalog/Genie_Z-80_60.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie Z-80/60</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 25.7m</p>
+                                    <p class="card-text text-muted">Platform high 23.7m</p>
+                                </div>
+                                <a href="./catalog/Genie_Z-8060.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 13 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZT23J-V">
+                            <img src="../image/Catalog/Zoomlion_ZT23J-V.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZT23J-V</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 25.1m</p>
+                                    <p class="card-text text-muted">Platform high 23.1m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZT23J-V.html"
+                                    class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 14 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_BA24ERT">
+                            <img src="../image/Catalog/Dingli_BA24ERT.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli BA24ERT</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 24m</p>
+                                    <p class="card-text text-muted">Platform high 22.4m</p>
+                                </div>
+                                <a href="./catalog/Dingli_BA24ERT.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 15 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_BA24RT">
+                            <img src="../image/Catalog/Dingli_BA24RT.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli BA24RT</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 24m</p>
+                                    <p class="card-text text-muted">Platform high 22.4m</p>
+                                </div>
+                                <a href="./catalog/Dingli_BA24RT.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 16 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 LGMG_T22J-H">
+                            <img src="../image/Catalog/LGMG_T22J-H.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">LGMG T22J-H</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 23.8m</p>
+                                    <p class="card-text text-muted">Platform high 21.8m</p>
+                                </div>
+                                <a href="./catalog/LGMG_T22J-H.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 17 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_BA22ERT" style="overflow: hidden;">
+                            <img src="../image/Catalog/Dingli_BA22ERT.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli BA22ERT</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 22.21m</p>
+                                    <p class="card-text text-muted">Platform high 20.21m</p>
+                                </div>
+                                <a href="./catalog/Dingli_BA22ERT.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 18 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_BA22RT">
+                            <img src="../image/Catalog/Dingli_BA22RT.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli BA22RT</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 22.21m</p>
+                                    <p class="card-text text-muted">Platform high 20.21m</p>
+                                </div>
+                                <a href="./catalog/Dingli_BA22RT.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 19 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_S-65XC">
+                            <img src="../image/Catalog/Genie_S-65XC.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie S-65XC</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 21.81m</p>
+                                    <p class="card-text text-muted">Platform high 19.81m</p>
+                                </div>
+                                <a href="./catalog/Genie_S-65XC.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 20 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 LGMG_T20JE">
+                            <img src="../image/Catalog/LGMG_T20JE.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">LGMG T20JE</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 21.8m</p>
+                                    <p class="card-text text-muted">Platform high 19.8m</p>
+                                </div>
+                                <a href="./catalog/LGMG_T20JE.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 21 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 LGMG_T20J-H">
+                            <img src="../image/Catalog/LGMG_T20J-H.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">LGMG 20J-H</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 21.8m</p>
+                                    <p class="card-text text-muted">Platform high 19.8m</p>
+                                </div>
+                                <a href="./catalog/LGMG_T20J-H.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 22 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZA20JERT-Li">
+                            <img src="../image/Catalog/Zoomlion_ZA20JERT-Li.jpg" class="card-img-top"
+                                alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZA20JERT-Li</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 21.38m</p>
+                                    <p class="card-text text-muted">Platform high 19.38m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZA20JERT-Li.html"
+                                    class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 23 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_Z-6240">
+                            <img src="../image/Catalog/Genie_Z-6240.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie Z-62/40</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 20.87m</p>
+                                    <p class="card-text text-muted">Platform high 18.87m</p>
+                                </div>
+                                <a href="./catalog/Genie_Z-6240.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 24 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Sinoboom_TB18EJ PLUS">
+                            <img src="../image/Catalog/Sinoboom_TB18EJ PLUS.jpg" class="card-img-top"
+                                alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Sinoboom TB18EJ PLUS</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 20.4m</p>
+                                    <p class="card-text text-muted">Platform high 18.4m</p>
+                                </div>
+                                <a href="./catalog/Sinoboom_TB18EJ PLUS.html"
+                                    class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 25 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_S-60">
+                            <img src="../image/Catalog/Genie_S-60.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie S-60</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 20.3m</p>
+                                    <p class="card-text text-muted">Platform high 18.3m</p>
+                                </div>
+                                <a href="./catalog/Genie_S-60.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 26 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_GTBZ20AE">
+                            <img src="../image/Catalog/Dingli_GTBZ20AE.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli GTBZ20AE</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 20.23m</p>
+                                    <p class="card-text text-muted">Platform high 18.23m</p>
+                                </div>
+                                <a href="./catalog/Dingli_GTBZ20AE.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 27 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_BA20RT">
+                            <img src="../image/Catalog/Dingli_BA20RT.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli BA20RT</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 20.23m</p>
+                                    <p class="card-text text-muted">Platform high 18.23m</p>
+                                </div>
+                                <a href="./catalog/Dingli_BA20RT.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 28 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_Z-60/37DC">
+                            <img src="../image/Catalog/Genie_Z-6037DC.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie Z-60/37DC</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 20.16m</p>
+                                    <p class="card-text text-muted">Platform high 18.16m</p>
+                                </div>
+                                <a href="./catalog/Genie_Z-6037DC.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 29 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_BA18NE">
+                            <img src="../image/Catalog/Dingli_BA18NE.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli BA18NE</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 18m</p>
+                                    <p class="card-text text-muted">Platform high 16m</p>
+                                </div>
+                                <a href="./catalog/Dingli_BA18NE.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 30 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZA14NJE-Li">
+                            <img src="../image/Catalog/Zoomlion_ZA14NJE-Li.jpg" class="card-img-top"
+                                alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZA14NJE-Li</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 16m</p>
+                                    <p class="card-text text-muted">Platform high 14m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZA14NJE-Li.html"
+                                    class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 31 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_Z-4525JDC">
+                            <img src="../image/Catalog/Genie_Z-4525JDC.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie Z-45/25JDCE</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 15.94m</p>
+                                    <p class="card-text text-muted">Platform high 13.94m</p>
+                                </div>
+                                <a href="./catalog/Genie_Z-4525JDC.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 32 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 LGMG_A14JE">
+                            <img src="../image/Catalog/LGMG_A14JE.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">LGMG A14JE</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 15.8m</p>
+                                    <p class="card-text text-muted">Platform high 13.8m</p>
+                                </div>
+                                <a href="./catalog/LGMG_A14JE.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 33 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZA10RJE">
+                            <img src="../image/Catalog/Zoomlion_ZA10RJE.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZA10RJE</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 11.55m</p>
+                                    <p class="card-text text-muted">Platform high 9.55m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZA10RJE.html"
+                                    class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 34 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_Z-3020NDC">
+                            <img src="../image/Catalog/Genie_Z-3020NDC.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie Z-30/20NDC</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 18m</p>
+                                    <p class="card-text text-muted">Platform high 16m</p>
+                                </div>
+                                <a href="./catalog/Genie_Z-3020NDC.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 35 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_BA11NE">
+                            <img src="../image/Catalog/Dingli_BA11NE.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli BA11NEE</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 10.8m</p>
+                                    <p class="card-text text-muted">Platform high 8.8m</p>
+                                </div>
+                                <a href="./catalog/Dingli_BA11NE.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 36 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_Z-3020NRJ">
+                            <img src="../image/Catalog/Genie_Z-3020NRJ.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie_Z-30/20NRJ</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 10.8m</p>
+                                    <p class="card-text text-muted">Platform high 8.8m</p>
+                                </div>
+                                <a href="./catalog/Genie_Z-3020NRJ.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class=" machine_type text-center d-flex mb-3">
+                        X-lift (6)
+                    </h2>
+                    <!-- Card 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Dingli_S0807AC+">
+                            <img src="../image/Catalog/Dingli_S0807AC+.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Dingli S0807AC+</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 7.8m</p>
+                                    <p class="card-text text-muted">Platform high 5.8m</p>
+                                </div>
+                                <a href="./catalog/Dingli_S0807AC+.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Noblelift_SC10H">
+                            <img src="../image/Catalog/Noblelift_SC10H.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Noblelift SC10H</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 10m</p>
+                                    <p class="card-text text-muted">Platform high 8m</p>
+                                </div>
+                                <a href="./catalog/Noblelift_SC10H.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Noblelift_SC12H">
+                            <img src="../image/Catalog/Noblelift_SC12H.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Noblelift SC12H</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 12m</p>
+                                    <p class="card-text text-muted">Platform high 10m</p>
+                                </div>
+                                <a href="./catalog/Noblelift_SC12H.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Noblelift_SC14H">
+                            <img src="../image/Catalog/Noblelift_SC14H.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Noblelift SC14H</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 12m</p>
+                                    <p class="card-text text-muted">Platform high 10m</p>
+                                </div>
+                                <a href="./catalog/Noblelift_SC14H.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Zoomlion_ZS1414HD-Li">
+                            <img src="../image/Catalog/Zoomlion_ZS1414HD-Li.jpg" class="card-img-top"
+                                alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Zoomlion ZS1414HD-Li</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 12m</p>
+                                    <p class="card-text text-muted">Platform high 10m</p>
+                                </div>
+                                <a href="./catalog/Zoomlion_ZS1414HD-Li.html"
+                                    class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="card machine-card h-100 Genie_GR-20">
+                            <img src="../image/Catalog/Genie_GR-20.jpg" class="card-img-top" alt="Boom Lift 40ft">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Genie GR-20</h5>
+                                <div class="subdetail">
+                                    <p class="card-text text-muted">Working high 12m</p>
+                                    <p class="card-text text-muted">Platform high 10m</p>
+                                </div>
+                                <a href="./catalog/Genie_GR-20.html" class="btn btn-detail mt-auto">ดูรายละเอียด</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- footer -->
+    <footer class="footer-custom text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Company Information -->
+                <div class="col-md-4 mb-3">
+                    <h5>เกี่ยวกับเรา</h5>
+                    <p>Smile Plus Rental Co., Ltd.<br>
+                        ให้บริการเช่าเครื่องจักรสำหรับงานก่อสร้างและอุตสาหกรรม</p>
+                    <p><i class="bi bi-geo-alt"></i> ที่อยู่: 123/45 ถนนสายหลัก เขตบางกอก กรุงเทพฯ</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-3 footer_link">
+                    <h5>ลิงก์ที่เป็นประโยชน์</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">หน้าหลัก</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">เกี่ยวกับเรา</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">เครื่องจักร</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-md-4 mb-3 footer_contact">
+                    <h5>ติดต่อเรา</h5>
+                    <p><i class="bi bi-telephone"></i> โทร: 0xx-xxx-xxxx</p>
+                    <p><i class="bi bi-envelope"></i> อีเมล: contact@smileplus.co.th</p>
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=61571227013520" target="_blank"
+                            class="text-white me-2">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://line.me/ti/p/yourLineID" target="_blank" class="text-white me-2">
+                            <i class="bi bi-line"></i>
+                        </a>
+                        <a href="tel:0xx-xxx-xxxx" class="text-white">
+                            <i class="bi bi-telephone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <div class="text-center footer_copy">
+                <p class="mb-0">&copy; 2025 Smile Plus Rental Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../jss/script.js"></script>
+</body>
+
+</html>
