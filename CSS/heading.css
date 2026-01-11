@@ -71,8 +71,8 @@
     height: 60px;
     transition: top 0.3s ease;
     display: flex;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 .navbar-custom {
@@ -264,7 +264,7 @@
 
 .Logo_md {
     position: fixed;
-    width: 50px;
+    width: 70px;
     height: 45px;
     border-radius: 7px;
 }
@@ -389,7 +389,7 @@
 
     .dropdown-item {
         font-family: "Trirong", serif;
-        font-weight: 500;
+        font-weight: 400;
         font-style: normal;
     }
 
@@ -408,6 +408,10 @@
 
     .navbar-collapse .nav-link:hover {
         color: inherit !important;
+    }
+
+    .dropdown-menu {
+        font-size: 13px;
     }
 
 
